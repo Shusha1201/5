@@ -1,0 +1,785 @@
+{
+	"info": {
+		"_postman_id": "cbbd6ca1-21ef-4ed3-8972-e9676c9e4333",
+		"name": "Clockify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "workspace",
+			"item": [
+				{
+					"name": "workspaces",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "all projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/projects",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"API\",\r\n  \"clientId\": \"\",\r\n  \"isPublic\": \"false\",\r\n  \"color\": \"#f44336\",\r\n  \"note\": \"This is project's note\",\r\n  \"billable\": \"true\",\r\n  \"public\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/projects",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "project in archive",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"archived\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/projects/{{projectID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"projects",
+								"{{projectID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete project",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/projects/{{projectID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"projects",
+								"{{projectID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "project id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/projects/{{project-classwork}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"projects",
+								"{{project-classwork}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "all clients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/clients",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a new client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Client1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/clients",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "a new client`S NAME",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"archived\": false,\r\n  \"name\": \"5555\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/clients/{{clientID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"clients",
+								"{{clientID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE client",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/clients/{{clientID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"clients",
+								"{{clientID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TAG",
+			"item": [
+				{
+					"name": "tag",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/tags",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"tag\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/tags",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "name",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"archived\": false,\r\n  \"name\": \"Tag4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/tags/{{TAGID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"tags",
+								"{{TAGID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/tags/{{TAGID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"tags",
+								"{{TAGID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "USER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"shashka12.01@mail.ru\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/users",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//user",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "group",
+			"item": [
+				{
+					"name": "group",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/user-groups",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"user-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "group Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"My group\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/user-groups",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"user-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "group Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Group\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/user-groups/{{usergroupID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"user-groups",
+								"{{usergroupID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "group Copy 3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Api-Key",
+								"value": "NDE1OTYxOGMtYjhlMS00MGU5LTgyOGItYWUzZGZmMzNkMWE2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Base}}//workspaces/{{workspaceId}}/user-groups/{{usergroupID}}",
+							"host": [
+								"{{Base}}"
+							],
+							"path": [
+								"",
+								"workspaces",
+								"{{workspaceId}}",
+								"user-groups",
+								"{{usergroupID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Base",
+			"value": "https://api.clockify.me/api/v1"
+		},
+		{
+			"key": "workspaceId",
+			"value": "61f41944bf1bbd124fc3f201"
+		},
+		{
+			"key": "project-classwork",
+			"value": "61f97508895dd52f3dd0c964"
+		},
+		{
+			"key": "projectID",
+			"value": "620a90c95404df628815ed1a"
+		},
+		{
+			"key": "clientID",
+			"value": "620a96f65404df628815f30b"
+		},
+		{
+			"key": "tagID",
+			"value": "620a9d41c1d10805278aaf11"
+		},
+		{
+			"key": "TAGID",
+			"value": "620a9e99c1d10805278ab066"
+		},
+		{
+			"key": "userID",
+			"value": "61f41943bf1bbd124fc3f200"
+		},
+		{
+			"key": "usergroupID",
+			"value": "620aa67fc1d10805278ab83a"
+		}
+	]
+}
